@@ -33,6 +33,7 @@ Route::delete('employees/{id}/delete', [EmployeeController::class, 'destroy']);
 
 //Manage department
 Route::resource('departments', DepartmentController::class);
+Route::resource('departments', DepartmentController::class);
 Route::get('departments', [DepartmentController::class, 'index']);
 Route::post('departments', [DepartmentController::class, 'store']);
 Route::get('departments/{id}', [DepartmentController::class, 'show']);
