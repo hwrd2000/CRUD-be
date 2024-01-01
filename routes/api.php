@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\Api\ProjectController;
 use App\Http\Controllers\Api\EmployeeController;
 use App\Http\Controllers\Api\DepartmentController;
@@ -49,4 +50,14 @@ Route::get('projects/{id}', [ProjectController::class, 'show']);
 Route::get('projects/{id}/edit', [ProjectController::class, 'edit']);
 Route::put('projects/{id}/edit', [ProjectController::class, 'update']);
 Route::delete('projects/{id}/delete', [ProjectController::class, 'destroy']);
+
+
+//Manage attendance
+Route::resource('attendances', AttendanceController::class);
+Route::get('attendances', [AttendanceController::class, 'index']);
+Route::post('attendances', [AttendanceController::class, 'store']);
+Route::get('attendances/{id}', [AttendanceController::class, 'show']);
+Route::get('attendances/{id}/edit', [AttendanceController::class, 'edit']);
+Route::put('attendances/{id}/edit', [AttendanceController::class, 'update']);
+Route::delete('attendances/{id}/delete', [AttendanceController::class, 'destroy']);
 
