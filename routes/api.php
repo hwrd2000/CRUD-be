@@ -51,7 +51,7 @@ Route::get('projects/{id}/edit', [ProjectController::class, 'edit']);
 Route::put('projects/{id}/edit', [ProjectController::class, 'update']);
 Route::delete('projects/{id}/delete', [ProjectController::class, 'destroy']);
 
-
+//Work in progress
 //Manage attendance
 Route::resource('attendances', AttendanceController::class);
 Route::get('attendances', [AttendanceController::class, 'index']);
