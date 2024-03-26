@@ -30,7 +30,7 @@ class DepartmentController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'department' => 'required|string|max:191',
+            'department' => 'required|string|max:190',
         ]);
 
         if($validator->fails()){
