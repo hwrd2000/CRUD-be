@@ -32,10 +32,10 @@ class EmployeeController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'name' => 'required|string|max:191',
-            'email' => 'required|email|max:191',
+            'name' => 'required|string|max:190',
+            'email' => 'required|email|max:190',
             'phone' => 'required|digits:11',
-            'address' => 'required|string|max:191',
+            'address' => 'required|string|max:190',
             'department_id' => 'required|exists:departments,id',
             'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif',
         ]);
@@ -110,10 +110,10 @@ class EmployeeController extends Controller
     public function update(Request $request, int $id)
 {
     $validator = Validator::make($request->all(), [
-        'name' => 'required|string|max:191',
-        'email' => 'required|email|max:191',
+        'name' => 'required|string|max:190',
+        'email' => 'required|email|max:190',
         'phone' => 'required|digits:11',
-        'address' => 'required|string|max:191',
+        'address' => 'required|string|max:190',
         'department_id' => 'required|exists:departments,id',
         'photo' => 'nullable|image|mimes:jpeg,png,jpg,gif',
     ]);
