@@ -149,7 +149,7 @@ class EmployeeController extends Controller
     if ($employees->save()) {
         return response()->json([
             'status' => 200,
-            'message' => "Employee updated successfully"
+            'message' => "Employee updated successfullyyyyy"
         ], 200);
     } else {
         return response()->json([
